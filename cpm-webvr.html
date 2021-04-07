@@ -5,10 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto WEBVR</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 </head>
 <body>
     <a-scene>
-        <a-plane></a-plane>
+        <a-cone class="iceberg" segments-radial="5" segments-height="3" height="1" radius-top="0.15" radius-bottom="0.5" position="3 -0.1 -1.5"></a-cone>
+        <a-cone class="iceberg" segments-radial="7" segments-height="3" height="0.5" radius-top="0.25" radius-bottom="0.35" position="-3 -0.1 -0.5"></a-cone>
+        <a-cone class="iceberg" segments-radial="6" segments-height="2" height="0.5" radius-top="0.25" radius-bottom="0.25" position="-5 -0.2 -3.5"></a-cone>
+        <a-plane
+            color="#333"
+            rotation="-90 0 0" scale="1000 1000 1000" 
+            roughness="1">
+        </a-plane>
     </a-scene>
 </body>
 </html>
