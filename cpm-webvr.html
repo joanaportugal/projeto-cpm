@@ -11,8 +11,8 @@
     <a-scene>
       <!-- ASSETS -->
       <a-assets>
-          <img id="tijolo" src="img/tijolo.jpg">
-          <img id="tijolo-normal" src="img/tijolo_normal.jpg">   
+        <img id="tijolo" src="img/tijolo.jpg" />
+        <img id="tijolo-normal" src="img/tijolo_normal.jpg" />
       </a-assets>
       <a-sky color="#87ceeb"></a-sky>
       <a-plane
@@ -21,7 +21,7 @@
         scale="1000 1000 1000"
         roughness="1"
       ></a-plane>
-      <!--PRIMEIRA CASA-->
+      <!--CASA-->
       <a-triangle
         color="orange"
         class="house"
@@ -45,6 +45,7 @@
         position="0 -0.2 -3.5"
       ></a-box>
       <a-plane
+        class="house"
         position="0.25 1.5 -3.5"
         rotation="-26.6 90 90"
         width="1.12"
@@ -52,19 +53,28 @@
         color="red"
       ></a-plane>
       <a-plane
+        class="house"
         position="-0.25 1.5 -3.5"
         rotation="26.6 90 90"
         width="1.12"
         height="1.1"
         color="red"
       ></a-plane>
+      <a-plane
+        class="house"
+        position="0 0 -3"
+        width="0.4"
+        height="1.2"
+        color="brown"
+      ></a-plane>
 
-    
       <!-- Caixa com textura de tijolo-->
       <a-box
         color="#ffffff"
         position="0 0.3 -4.5"
-        width="4" height="1" depth="0.5"
+        width="4"
+        height="1"
+        depth="0.5"
         src="#tijolo"
         roughness="0.8"
         repeat="1 1"
