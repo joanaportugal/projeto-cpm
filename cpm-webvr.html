@@ -1,87 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projeto WEBVR</title>
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-  </head>
-  <body>
-    <a-scene>
-      <!-- ASSETS -->
-      <a-assets>
-        <img id="tijolo" src="img/tijolo.jpg" />
-        <img id="tijolo-normal" src="img/tijolo_normal.jpg" />
-      </a-assets>
-      <a-sky color="#87ceeb"></a-sky>
-      <a-plane
-        color="#333"
-        rotation="-90 0 0"
-        scale="1000 1000 1000"
-        roughness="1"
-      ></a-plane>
-      <!--CASA-->
-      <a-triangle
-        color="orange"
-        class="house"
-        height="0.5"
-        position="0 1.5 -3"
-      ></a-triangle>
-      <a-triangle
-        color="orange"
-        class="house"
-        height="0.5"
-        position="0 1.5 -4"
-        repeat="1 1"
-      ></a-triangle>
-      <a-box
-        class="house"
-        segments-radial="6"
-        segments-height="2"
-        height="2.4"
-        radius-top="0.25"
-        radius-bottom="0.25"
-        position="0 -0.2 -3.5"
-      ></a-box>
-      <a-plane
-        class="house"
-        position="0.25 1.5 -3.5"
-        rotation="-26.6 90 90"
-        width="1.12"
-        height="1.1"
-        color="red"
-      ></a-plane>
-      <a-plane
-        class="house"
-        position="-0.25 1.5 -3.5"
-        rotation="26.6 90 90"
-        width="1.12"
-        height="1.1"
-        color="red"
-      ></a-plane>
-      <a-plane
-        class="house"
-        position="0 0 -3"
-        width="0.4"
-        height="1.2"
-        color="brown"
-      ></a-plane>
 
-      <!-- Caixa com textura de tijolo-->
-      <a-box
-        color="#ffffff"
-        position="0 0.3 -4.5"
-        width="4"
-        height="1"
-        depth="0.5"
-        src="#tijolo"
-        roughness="0.8"
-        repeat="1 1"
-        normal-map="#tijolo-normal"
-        normal-scale="1 -1"
-        side="double"
-      ></a-box>
-    </a-scene>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto WEBVR</title>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <!-- ASSETS -->
+    <a-assets>
+      <img id="tijolo" src="img/tijolo.jpg" />
+      <img id="tijolo-normal" src="img/tijolo_normal.jpg" />
+    </a-assets>
+    <a-sky color="#87ceeb"></a-sky>
+    <a-plane color="#333" rotation="-90 0 0" scale="1000 1000 1000" roughness="1"></a-plane>
+    <!--CASA-->
+    <a-triangle color="orange" class="house" height="0.5" position="0 1.5 -3"></a-triangle>
+    <a-triangle color="orange" class="house" height="0.5" position="0 1.5 -4" side="double"></a-triangle>
+    <a-box class="house" segments-radial="6" segments-height="2" height="2.4" radius-top="0.25" radius-bottom="0.25" position="0 -0.2 -3.5"></a-box>
+    <a-plane class="house" position="0.25 1.5 -3.5" rotation="-26.6 90 90" width="1.12" height="1.1" color="red" side="double"></a-plane>
+    <a-plane class="house" position="-0.25 1.5 -3.5" rotation="26.6 90 90" width="1.12" height="1.1" color="red" side="double"></a-plane>
+    <a-plane class="house" position="0 0 -3" width="0.4" height="1.2" color="#501B00" side="double"></a-plane>
+
+    <!-- Caixa com textura de tijolo-->
+    <a-box color="#ffffff" position="6 0.3 -4.5" width="2" height="1" depth="0.5" src="#tijolo" roughness="0.8" repeat="1 1" normal-map="#tijolo-normal" normal-scale="1 -1" side="double"></a-box>
+    <a-box color="#ffffff" position="4 0.3 -4.5" width="2" height="1" depth="0.5" src="#tijolo" roughness="0.8" repeat="1 1" normal-map="#tijolo-normal" normal-scale="1 -1" side="double"></a-box>
+    <a-box color="#ffffff" position="2 0.3 -4.5" width="2" height="1" depth="0.5" src="#tijolo" roughness="0.8" repeat="1 1" normal-map="#tijolo-normal" normal-scale="1 -1" side="double"></a-box>
+    <a-box color="#ffffff" position="0 0.3 -4.5" width="2" height="1" depth="0.5" src="#tijolo" roughness="0.8" repeat="1 1" normal-map="#tijolo-normal" normal-scale="1 -1" side="double"></a-box>
+    <a-box color="#ffffff" position="-2 0.3 -4.5" width="2" height="1" depth="0.5" src="#tijolo" roughness="0.8" repeat="1 1" normal-map="#tijolo-normal" normal-scale="1 -1" side="double"></a-box>
+    <a-box color="#ffffff" position="-4 0.3 -4.5" width="2" height="1" depth="0.5" src="#tijolo" roughness="0.8" repeat="1 1" normal-map="#tijolo-normal" normal-scale="1 -1" side="double"></a-box>
+    <a-box color="#ffffff" position="-6 0.3 -4.5" width="2" height="1" depth="0.5" src="#tijolo" roughness="0.8" repeat="1 1" normal-map="#tijolo-normal" normal-scale="1 -1" side="double"></a-box>
+    <!--2CASA-->
+    <a-triangle color="orange" class="house" height="0.5" position="4 1.5 -3"></a-triangle>
+    <a-triangle color="orange" class="house" height="0.5" position="4 1.5 -4" side="double"></a-triangle>
+    <a-box class="house" segments-radial="6" segments-height="2" height="2.4" radius-top="0.25" radius-bottom="0.25" position="4 -0.2 -3.5"></a-box>
+    <a-plane class="house" position="4.25 1.5 -3.5" rotation="-26.6 90 90" width="1.12" height="1.1" color="red" side="double"></a-plane>
+    <a-plane class="house" position="3.75 1.5 -3.5" rotation="26.6 90 90" width="1.12" height="1.1" color="red" side="double"></a-plane>
+    <a-plane class="house" position="4 0 -3" width="0.4" height="1.2" color="#501B00" side="double"></a-plane>
+
+    <!--3CASA-->
+    <a-triangle color="orange" class="house" height="0.5" position="-2.5 1.5 -3.5" rotation="0 90 0"></a-triangle>
+    <a-triangle color="orange" class="house" height="0.5" position="-5.5 1.5 -3.5" rotation="0 90 0" side="double"></a-triangle>
+    <a-box class="house" segments-radial="6" segments-height="2" height="2.4" width="3" radius-top="0.25" radius-bottom="0.25" position="-4 -0.2 -3.5"></a-box>
+    <a-plane class="house" position="-4 1.5 -3.75" rotation="26.6 0 90" width="1.12" height="3.1" color="red" side="double"></a-plane>
+    <a-plane class="house" position="-4 1.5 -3.25" rotation="-26.6 0 90" width="1.12" height="3.1" color="red" side="double"></a-plane>
+    <a-plane class="house" position="-4 0 -3" width="0.4" height="1.2" color="#501B00" side="double"></a-plane>
+  </a-scene>
+</body>
+
 </html>
