@@ -1,298 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projeto WEBVR</title>
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-  </head>
 
-  <body>
-    <a-scene>
-      <!-- ASSETS -->
-      <a-assets>
-        <img id="tijolo" src="./assets/img/tijolo.jpg" />
-        <img id="tijolo-normal" src="./assets/img/tijolo_normal.jpg" />
-        <img id="estrada" src="./assets/img/road.jpg" />
-        <img id="telha" src="./img/telha.jpg" />
-        <audio id="wind" src="./assets/sounds/wind.mp3"></audio>
-      </a-assets>
-      <a-sky color="#212121"></a-sky>
-      <a-entity id="luz-ambiente" light="type: ambient; intensity: 0.2">
-      </a-entity>
-      <a-plane
-        color="#333"
-        rotation="-90 0 0"
-        scale="1000 1000 1000"
-        roughness="1"
-      ></a-plane>
-      <a-entity
-        id="vento"
-        position="0 0 0"
-        sound="src: #wind; autoplay: true; loop:true"
-      ></a-entity>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto WEBVR</title>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
 
-      <!-- CASA 1 -->
-      <a-entity class="casa">
-        <a-triangle
-          color="orange"
-          class="house"
-          height="0.5"
-          position="-1.777 1.5 -3"
-        ></a-triangle>
-        <a-triangle
-          color="orange"
-          class="house"
-          height="0.5"
-          position="-1.777 1.5 -4"
-          side="double"
-        ></a-triangle>
-        <a-box
-          class="house"
-          segments-radial="6"
-          segments-height="2"
-          height="2.4"
-          radius-top="0.25"
-          radius-bottom="0.25"
-          position="-1.800 -0.200 -3.513"
-        ></a-box>
-        <a-plane
-          class="house"
-          position="-1.526 1.5 -3.5"
-          rotation="-26.6 90 90"
-          width="1.12"
-          height="1.1"
-          color="red"
-          side="double"
-          src="#telha"
-        ></a-plane>
-        <a-plane
-          class="house"
-          position="-2.051 1.5 -3.5"
-          rotation="26.6 90 90"
-          width="1.12"
-          height="1.1"
-          color="red"
-          side="double"
-          src="#telha"
-        ></a-plane>
-        <a-plane
-          class="house"
-          position="-1.297 0 -3.508"
-          rotation="0 90 0"
-          width="0.4"
-          height="1.2"
-          color="#501B00"
-          side="double"
-        ></a-plane>
-      </a-entity>
+<body>
+  <a-scene>
+    <!-- ASSETS -->
+    <a-assets>
+      <img id="tijolo" src="./assets/img/tijolo.jpg" />
+      <img id="tijolo-normal" src="./assets/img/tijolo_normal.jpg" />
+      <img id="estrada" src="./assets/img/road.jpg" />
+      <img id="telha" src="./img/telha.jpg" />
+      <img id="porta" src="./img/porta.png" />
+      <img id="muralha" src="./img/muralha.jpeg" />
+      <img id="paralelo" src="./img/paralelo.jpg" />
+      <img id="relva" src="./img/relva.jpg" />
+      <!--<audio id="wind" src="./assets/sounds/wind.mp3"></audio>-->
+    </a-assets>
+    <a-sky color="#212121"></a-sky>
+    <a-entity id="luz-ambiente" light="type: ambient; intensity: 0.2">
+    </a-entity>
+    <a-plane color="#333" rotation="-90 0 0" scale="1000 1000 1000" roughness="1"></a-plane>
+    <a-entity id="vento" position="0 0 0" sound="src: #wind; autoplay: true; loop:true"></a-entity>
 
-      <!-- CASA 2 -->
-      <a-entity
-        class="casa"
-        position="-7 0 -3"
-        rotation="0 -90 0"
-        scale="1 1 1"
-      >
-        <a-triangle
-          color="orange"
-          class="house"
-          height="0.5"
-          position="-1.777 1.5 -3"
-        ></a-triangle>
-        <a-triangle
-          color="orange"
-          class="house"
-          height="0.5"
-          position="-1.777 1.5 -4"
-          side="double"
-        ></a-triangle>
-        <a-box
-          class="house"
-          segments-radial="6"
-          segments-height="2"
-          height="2.4"
-          radius-top="0.25"
-          radius-bottom="0.25"
-          position="-1.800 -0.200 -3.513"
-        ></a-box>
-        <a-plane
-          class="house"
-          position="-1.526 1.5 -3.5"
-          rotation="-26.6 90 90"
-          width="1.12"
-          height="1.1"
-          color="red"
-          side="double"
-          src="#telha"
-        ></a-plane>
-        <a-plane
-          class="house"
-          position="-2.051 1.5 -3.5"
-          rotation="26.6 90 90"
-          width="1.12"
-          height="1.1"
-          color="red"
-          side="double"
-          src="#telha"
-        ></a-plane>
-        <a-plane
-          class="house"
-          position="-1.297 0 -3.508"
-          rotation="0 90 0"
-          width="0.4"
-          height="1.2"
-          color="#501B00"
-          side="double"
-        ></a-plane>
-      </a-entity>
+    <!-- CASA 1 -->
+    <a-entity class="casa">
+      <a-triangle color="orange" class="house" height="0.5" position="-1.777 1.5 -3"></a-triangle>
+      <a-triangle color="orange" class="house" height="0.5" position="-1.777 1.5 -4" side="double"></a-triangle>
+      <a-box class="house" segments-radial="6" segments-height="2" height="2.4" radius-top="0.25" radius-bottom="0.25"
+        position="-1.800 -0.200 -3.513"></a-box>
+      <a-plane class="house" position="-1.526 1.5 -3.5" rotation="-26.6 90 90" width="1.12" height="1.1" color="orange"
+        side="double" src="#telha"></a-plane>
+      <a-plane class="house" position="-2.051 1.5 -3.5" rotation="26.6 90 90" width="1.12" height="1.1" color="orange"
+        side="double" src="#telha"></a-plane>
+      <a-plane class="house" position="-1.297 0 -3.508" rotation="0 90 0" width="0.4" height="1.2" color="" src="#porta"
+        side="double"></a-plane>
+    </a-entity>
 
-      <!-- CASA 3 -->
-      <a-entity
-        class="casa"
-        position="-10.5 0 -8"
-        rotation="0 -90 0"
-        scale="1 1 3"
-      >
-        <a-triangle
-          color="orange"
-          class="house"
-          height="0.5"
-          position="-1.777 1.5 -3"
-        ></a-triangle>
-        <a-triangle
-          color="orange"
-          class="house"
-          height="0.5"
-          position="-1.777 1.5 -4"
-          side="double"
-        ></a-triangle>
-        <a-box
-          class="house"
-          segments-radial="6"
-          segments-height="2"
-          height="2.4"
-          radius-top="0.25"
-          radius-bottom="0.25"
-          position="-1.800 -0.200 -3.513"
-        ></a-box>
-        <a-plane
-          class="house"
-          position="-1.526 1.5 -3.5"
-          rotation="-26.6 90 90"
-          width="1.12"
-          height="1.1"
-          color="red"
-          side="double"
-          src="#telha"
-        ></a-plane>
-        <a-plane
-          class="house"
-          position="-2.051 1.5 -3.5"
-          rotation="26.6 90 90"
-          width="1.12"
-          height="1.1"
-          color="red"
-          side="double"
-          src="#telha"
-        ></a-plane>
-        <a-plane
-          class="house"
-          position="-1.297 0 -3.508"
-          rotation="0 90 0"
-          width="0.4"
-          height="1.2"
-          color="#501B00"
-          side="double"
-        ></a-plane>
-      </a-entity>
+    <!-- CASA 2 -->
+    <a-entity class="casa" position="-7 0 -3" rotation="0 -90 0" scale="1 1 1">
+      <a-triangle color="orange" class="house" height="0.5" position="-1.777 1.5 -3"></a-triangle>
+      <a-triangle color="orange" class="house" height="0.5" position="-1.777 1.5 -4" side="double"></a-triangle>
+      <a-box class="house" segments-radial="6" segments-height="2" height="2.4" radius-top="0.25" radius-bottom="0.25"
+        position="-1.800 -0.200 -3.513"></a-box>
+      <a-plane class="house" position="-1.526 1.5 -3.5" rotation="-26.6 90 90" width="1.12" height="1.1" color="orange"
+        side="double" src="#telha"></a-plane>
+      <a-plane class="house" position="-2.051 1.5 -3.5" rotation="26.6 90 90" width="1.12" height="1.1" color="orange"
+        side="double" src="#telha"></a-plane>
+      <a-plane class="house" position="-1.297 0 -3.508" rotation="0 90 0" width="0.4" height="1.2" color="" src="#porta"
+        side="double"></a-plane>
+    </a-entity>
 
-      <!-- Muro Esquerdo -->
-      <a-entity class="tijolos">
-        <a-box
-          color="#ffffff"
-          position="-8.221 0.3 -6.732"
-          width="40"
-          height="20"
-          depth="4"
-          src="#tijolo"
-          roughness="0.8"
-          repeat="1 1"
-          normal-map="#tijolo-normal"
-          normal-scale="1 -1"
-          side="double"
-          rotation="0 90 0"
-        ></a-box>
-      </a-entity>
+    <!-- CASA 3 GRANDE -->
+    <a-entity class="casa" position="-11.6 0 -8" rotation="0 -90 0" scale="1 2 3.3">
+      <a-triangle color="orange" class="house" height="0.5" position="-1.777 1.5 -3"></a-triangle>
+      <a-triangle color="orange" class="house" height="0.5" position="-1.777 1.5 -4" side="double"></a-triangle>
+      <a-box class="house" segments-radial="6" segments-height="2" height="2.4" radius-top="0.25" radius-bottom="0.25"
+        position="-1.800 -0.200 -3.513" color="#58ACFA"></a-box>
+      <a-plane class="house" position="-1.526 1.5 -3.5" rotation="-26.6 90 90" width="1.12" height="1.1" color="orange"
+        side="double" src="#telha"></a-plane>
+      <a-plane class="house" position="-2.051 1.5 -3.5" rotation="26.6 90 90" width="1.12" height="1.1" color="orange"
+        side="double" src="#telha"s></a-plane>
+      <a-plane class="house" position="-1.297 0.4 -3.508" rotation="0 90 0" width="0.2" height="0.8" src="#porta"
+        side="double"></a-plane>
+    </a-entity>
 
-      <!--Estrada Horizontal-->
-      <a-plane
-        class="street"
-        position="0 0.1 -2"
-        width="1.4"
-        height="30"
-        rotation="-90 90 0"
-        side="double"
-        src="#estrada"
-        roughness="0.8"
-        repeat="1 2"
-      ></a-plane>
+    <!-- CASA 4 -->
+    <a-entity class="casa" position="-8.936 0.408 -1.090" rotation="0 -45 0" scale="1.3 1.2 2.5">
+      <a-triangle color="orange" class="house" height="0.5" position="-1.777 1.5 -3"></a-triangle>
+      <a-triangle color="orange" class="house" height="0.5" position="-1.777 1.5 -4" side="double"></a-triangle>
+      <a-box class="house" segments-radial="6" segments-height="2" height="2.4" radius-top="0.25" radius-bottom="0.25"
+        position="-1.800 -0.200 -3.513"></a-box>
+      <a-plane class="house" position="-1.526 1.5 -3.5" rotation="-26.6 90 90" width="1.12" height="1.1" color="orange"
+        side="double" src="#telha"></a-plane>
+      <a-plane class="house" position="-2.051 1.5 -3.5" rotation="26.6 90 90" width="1.12" height="1.1" color="orange"
+        side="double" src="#telha"></a-plane>
+      <a-plane class="house" position="-1.297 0 -3.508" rotation="0 90 0" width="0.4" height="1.2" color="" src="#porta"
+        side="double"></a-plane>
+    </a-entity>
 
-      <!--Passeio Vertical-->
-      <a-plane
-        class="street"
-        position="0 0.1 -5.5"
-        color="grey"
-        width="1.4"
-        height="5.6"
-        rotation="-90 0 0"
-        side="double"
-      ></a-plane>
+    <!-- CASA 5 -->
+    <a-entity class="casa" position="-7.301 0.408 3.449" rotation="0 -25 0" scale="1.5 1 2.5">
+      <a-triangle color="orange" class="house" height="0.5" position="-1.777 1.5 -3"></a-triangle>
+      <a-triangle color="orange" class="house" height="0.5" position="-1.777 1.5 -4" side="double"></a-triangle>
+      <a-box class="house" segments-radial="6" segments-height="2" height="2.4" radius-top="0.25" radius-bottom="0.25"
+        position="-1.800 -0.200 -3.513" color="#F2A253"></a-box>
+      <a-plane class="house" position="-1.526 1.5 -3.5" rotation="-26.6 90 90" width="1.12" height="1.1" color="orange"
+        side="double" src="#telha"></a-plane>
+      <a-plane class="house" position="-2.051 1.5 -3.5" rotation="26.6 90 90" width="1.12" height="1.1" color="orange"
+        side="double" src="#telha"></a-plane>
+      <a-plane class="house" position="-1.297 0 -3.508" rotation="0 90 0" width="0.4" height="1.2" color="" src="#porta"
+        side="double"></a-plane>
+    </a-entity>
 
-      <!-- poste esquerdo + luz -->
-      <a-cylinder position="-7 0.3 -3.5" color="black" height="5" radius="0.1">
-      </a-cylinder>
-      <a-sphere
-        id="luz-esq"
-        position="-7 3 -3.5"
-        color="yellow"
-        scale="0.2 0.2 0.2"
-      ></a-sphere>
-      <a-entity
-        id="luz-spot"
-        light="type: spot; 
-            color: yellow;
+    <!-- CASA  6-->
+    <a-entity class="casa" position="-6.925 0.408 -6.661" rotation="0 -120 0" scale="3 1.2 2.8">
+      <a-triangle color="orange" class="house" height="0.5" position="-1.777 1.5 -3"></a-triangle>
+      <a-triangle color="orange" class="house" height="0.5" position="-1.777 1.5 -4" side="double"></a-triangle>
+      <a-box class="house" segments-radial="6" segments-height="2" height="2.4" radius-top="0.25" radius-bottom="0.25"
+        position="-1.800 -0.200 -3.513" color="#7CAB0F"></a-box>
+      <a-plane class="house" position="-1.526 1.5 -3.5" rotation="-26.6 90 90" width="1.12" height="1.1" color="orange"
+        side="double" src="#telha"></a-plane>
+      <a-plane class="house" position="-2.051 1.5 -3.5" rotation="26.6 90 90" width="1.12" height="1.1" color="orange"
+        side="double" src="#telha"></a-plane>
+      <a-plane class="house" position="-1.297 0 -3.508" rotation="0 90 0" width="0.4" height="1.2" color="" src="#porta"
+        side="double"></a-plane>
+    </a-entity>
+
+    <!-- CASA  7-->
+    <a-entity class="casa" position="1.014 0.408 -7.797" rotation="0 -90 0" scale="1 1.2 2">
+      <a-triangle color="orange" class="house" height="0.5" position="-1.777 1.5 -3"></a-triangle>
+      <a-triangle color="orange" class="house" height="0.5" position="-1.777 1.5 -4" side="double"></a-triangle>
+      <a-box class="house" segments-radial="6" segments-height="2" height="2.4" radius-top="0.25" radius-bottom="0.25"
+        position="-1.800 -0.200 -3.513" color="#750002"></a-box>
+      <a-plane class="house" position="-1.526 1.5 -3.5" rotation="-26.6 90 90" width="1.12" height="1.1" color="orange"
+        side="double" src="#telha"></a-plane>
+      <a-plane class="house" position="-2.051 1.5 -3.5" rotation="26.6 90 90" width="1.12" height="1.1" color="orange"
+        side="double" src="#telha"></a-plane>
+      <a-plane class="house" position="-1.297 0 -3.508" rotation="0 90 0" width="0.4" height="1.2" color="" src="#porta"
+        side="double"></a-plane>
+    </a-entity>
+
+    <!-- CASA  8-->
+    <a-entity class="casa" position="-3.351 0.408 -1.781" rotation="0 -90 0" scale="0.8 0.6 1.5">
+      <a-triangle color="orange" class="house" height="0.5" position="-1.777 1.5 -3"></a-triangle>
+      <a-triangle color="orange" class="house" height="0.5" position="-1.777 1.5 -4" side="double"></a-triangle>
+      <a-box class="house" segments-radial="6" segments-height="2" height="2.4" radius-top="0.25" radius-bottom="0.25"
+        position="-1.800 -0.200 -3.513"></a-box>
+      <a-plane class="house" position="-1.526 1.5 -3.5" rotation="-26.6 90 90" width="1.12" height="1.1" color="orange"
+        side="double" src="#telha"></a-plane>
+      <a-plane class="house" position="-2.051 1.5 -3.5" rotation="26.6 90 90" width="1.12" height="1.1" color="orange"
+        side="double" src="#telha"></a-plane>
+      <a-plane class="house" position="-1.297 0 -3.508" rotation="0 90 0" width="0.4" height="1.2" color="" src="#porta"
+        side="double"></a-plane>
+    </a-entity>
+
+    <!-- CASA 9 -->
+    <a-entity class="casa" position="4.660 0 -2.078" rotation="0 -90 0" scale="1 0.8 1">
+      <a-triangle color="orange" class="house" height="0.5" position="-1.777 1.5 -3"></a-triangle>
+      <a-triangle color="orange" class="house" height="0.5" position="-1.777 1.5 -4" side="double"></a-triangle>
+      <a-box class="house" segments-radial="6" segments-height="2" height="2.4" radius-top="0.25" radius-bottom="0.25"
+        position="-1.800 -0.200 -3.513"></a-box>
+      <a-plane class="house" position="-1.526 1.5 -3.5" rotation="-26.6 90 90" width="1.12" height="1.1" color="orange"
+        side="double" src="#telha"></a-plane>
+      <a-plane class="house" position="-2.051 1.5 -3.5" rotation="26.6 90 90" width="1.12" height="1.1" color="orange"
+        side="double" src="#telha"></a-plane>
+      <a-plane class="house" position="-1.297 0 -3.508" rotation="0 90 0" width="0.4" height="1.2" color="" src="#porta"
+        side="double"></a-plane>
+    </a-entity>
+
+    <!-- CASA 10 -->
+    <a-entity class="casa" position="-3.059 0 -9.033" rotation="0 -90 0" scale="1 1.2 2">
+      <a-triangle color="orange" class="house" height="0.5" position="-1.777 1.5 -3"></a-triangle>
+      <a-triangle color="orange" class="house" height="0.5" position="-1.777 1.5 -4" side="double"></a-triangle>
+      <a-box class="house" segments-radial="6" segments-height="2" height="2.4" radius-top="0.25" radius-bottom="0.25"
+        position="-1.800 -0.200 -3.513"></a-box>
+      <a-plane class="house" position="-1.526 1.5 -3.5" rotation="-26.6 90 90" width="1.12" height="1.1" color="orange"
+        side="double" src="#telha"></a-plane>
+      <a-plane class="house" position="-2.051 1.5 -3.5" rotation="26.6 90 90" width="1.12" height="1.1" color="orange"
+        side="double" src="#telha"></a-plane>
+      <a-plane class="house" position="-1.297 0 -3.508" rotation="0 90 0" width="0.4" height="1.2" color="" src="#porta"
+        side="double"></a-plane>
+    </a-entity>
+
+    <!-- CASA 11 -->
+    <a-entity class="casa" position="2.627 0 -5.632" rotation="0 -120 0" scale="1 0.8 1">
+      <a-triangle color="orange" class="house" height="0.5" position="-1.777 1.5 -3"></a-triangle>
+      <a-triangle color="orange" class="house" height="0.5" position="-1.777 1.5 -4" side="double"></a-triangle>
+      <a-box class="house" segments-radial="6" segments-height="2" height="2.4" radius-top="0.25" radius-bottom="0.25"
+        position="-1.800 -0.200 -3.513"></a-box>
+      <a-plane class="house" position="-1.526 1.5 -3.5" rotation="-26.6 90 90" width="1.12" height="1.1" color="orange"
+        side="double" src="#telha"></a-plane>
+      <a-plane class="house" position="-2.051 1.5 -3.5" rotation="26.6 90 90" width="1.12" height="1.1" color="orange"
+        side="double" src="#telha"></a-plane>
+      <a-plane class="house" position="-1.297 0 -3.508" rotation="0 90 0" width="0.4" height="1.2" color="" src="#porta"
+        side="double"></a-plane>
+    </a-entity>
+
+    <!-- RELVA LE -->
+    <a-plane class="relva" src="#relva" position="-4.810 0.032 -7.512" scale="8 10 0" rotation="90 0 0" side="double">
+    </a-plane>
+    <!-- RELVA LD -->
+    <a-plane class="relva" src="#relva" position="5.754 0.032 -7.512" scale="10 10 0" rotation="90 0 0" side="double">
+    </a-plane>
+
+    <!-- MURALHA LE -->
+    <a-entity class="tijolos">
+      <a-box color="#ffffff" position="-8.8611 0.3 -7.616" width="10" height="5" depth="1" rotation="0 90 0"
+        src="#muralha" roughness="0.8" repeat="1 1" normal-map="#tijolo-normal" normal-scale="1 -1" side="double"
+        rotation="0 90 0"></a-box>
+    </a-entity>
+
+    <!-- MURALHA TRASEIRA-->
+    <a-entity class="tijolos">
+      <a-box color="#ffffff" position="-4.361 0.3 -13.119" width="10" height="5" depth="1" rotation="0 0 0"
+        src="#muralha" roughness="0.8" repeat="1 1" normal-map="#tijolo-normal" normal-scale="1 -1" side="double"
+        rotation="0 0 0"></a-box>
+    </a-entity>
+
+    <!-- MURALHA TRASEIRA 2-->
+    <a-entity class="tijolos">
+      <a-box color="#ffffff" position="5.642 0.3 -13.119" width="10" height="5" depth="1" rotation="0 0 0"
+        src="#muralha" roughness="0.8" repeat="1 1" normal-map="#tijolo-normal" normal-scale="1 -1" side="double"
+        rotation="0 0 0"></a-box>
+    </a-entity>
+
+    <!-- MURALHA LD -->
+    <a-entity class="tijolos">
+      <a-box color="#ffffff" position="10.182 0.3 -7.616" width="10" height="5" depth="1" rotation="0 90 0"
+        src="#muralha" roughness="0.8" repeat="1 1" normal-map="#tijolo-normal" normal-scale="1 -1" side="double"
+        rotation="0 90 0"></a-box>
+    </a-entity>
+
+    <!--Estrada Horizontal-->
+    <a-plane class="street" position="0 0.1 -2" width="1.4" height="30" rotation="-90 90 0" side="double" src="#estrada"
+      roughness="0.8" repeat="1 2"></a-plane>
+
+    <!--Passeio Vertical-->
+    <a-plane src="#paralelo" class="street" position="-0.040 0.020 -6.886" scale="3 8.5 1"
+      rotation="90 0 0" side="double"></a-plane>
+
+    <!-- poste esquerdo + luz -->
+    <a-cylinder position="-7 0.3 -3.5" color="black" height="5" radius="0.1">
+    </a-cylinder>
+    <a-sphere id="luz-esq" position="-7 3 -3.5" color="yellow" scale="0.2 0.2 0.2"></a-sphere>
+    <a-entity id="luz-spot" light="type: spot; 
+            color: white;
             target: #luz-esq; 
             angle: 90; penumbra: 1; 
-            castShadow: true"
-        position="-2.5 3.5 1"
-      >
-      </a-entity>
+            castShadow: true" position="-2.5 3.5 1">
+    </a-entity>
 
-      <!-- poste direito + luz -->
-      <a-cylinder
-        position="6 0.3 -3.5"
-        color="black"
-        height="5"
-        radius="0.1"
-      ></a-cylinder>
-      <a-sphere
-        id="luz-dir"
-        position="6 3 -3.5"
-        color="yellow"
-        scale="0.2 0.2 0.2"
-      ></a-sphere>
-      <a-entity
-        id="luz-spot"
-        light="type: spot; 
-            color: yellow;
+    <!-- poste direito + luz -->
+    <a-cylinder position="6 0.3 -3.5" color="black" height="5" radius="0.1"></a-cylinder>
+    <a-sphere id="luz-dir" position="6 3 -3.5" color="yellow" scale="0.2 0.2 0.2"></a-sphere>
+    <a-entity id="luz-spot" light="type: spot; 
+            color: white;
             target: #luz-dir; 
             angle: 90; penumbra: 1; 
-            castShadow: true"
-        position="2.5 3.5 1"
-      >
-      </a-entity>
-    </a-scene>
-  </body>
+            castShadow: true" position="2.5 3.5 1">
+    </a-entity>
+  </a-scene>
+</body>
+
 </html>
